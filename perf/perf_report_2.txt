@@ -1,0 +1,51 @@
+Acceleration:
+m^1s^-2
+
+Merged two compound_units:
+s^2s^3m^1s^-2
+
+Condensing the two merged ones:
+s^3m^1
+
+Multiplying two compound_units:
+m^5s^-3
+
+Dividing two compound_units:
+m^1s^-2
+
+Dividing again two compound_units:
+m^1s^0
+
+Removing degrees that are equal to zero:
+m^1
+
+Unfolding a nested compound_unit:
+m^2m^6s^-4m^-8
+
+Formating the unfolded compound_unit:
+s^-4
+
+
+ Performance counter stats for './a.out -e cycles dd if=/dev/zero of=/dev/null count=100000':
+
+              2,43 msec task-clock                #    0,712 CPUs utilized          
+                 2      context-switches          #  822,269 /sec                   
+                 0      cpu-migrations            #    0,000 /sec                   
+               126      page-faults               #   51,803 K/sec                  
+           2641736      cycles                    #    1,086 GHz                    
+           3850079      instructions              #    1,46  insn per cycle         
+            658179      branches                  #  270,600 M/sec                  
+             17644      branch-misses             #    2,68% of all branches        
+          13208660      slots                     #    5,431 G/sec                  
+           3901589      topdown-retiring          #     29,5% retiring              
+           2175544      topdown-bad-spec          #     16,4% bad speculation       
+           3781302      topdown-fe-bound          #     28,5% frontend bound        
+           3388222      topdown-be-bound          #     25,6% backend bound         
+
+       0,003418337 seconds time elapsed
+
+       0,000000000 seconds user
+       0,003155000 seconds sys
+
+
+

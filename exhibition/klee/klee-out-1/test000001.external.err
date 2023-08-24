@@ -1,0 +1,7 @@
+Error: failed external call: _ZNSolsEPFRSoS_E
+File: ../../2019_Compound-Units-master/global_cu.cpp
+Line: 881
+assembly.ll line: 200
+State: 1
+Stack: 
+	#000000200 in main(1, 94502907174208) at ../../2019_Compound-Units-master/global_cu.cpp:881

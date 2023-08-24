@@ -1,0 +1,78 @@
+KLEE: WARNING: Module and host target triples do not match: 'x86_64-pc-linux-gnu' != 'x86_64-unknown-linux-gnu'
+This may cause unexpected crashes or assertion violations.
+KLEE: output directory is "/home/ptesic@syrmia.com/Desktop/VS/compound_unit/2023_Analysis_Compound_Unit/klee2/klee-out-1"
+KLEE: Using STP solver backend
+KLEE: SAT solver: CryptoMiniSat
+warning: Linking two modules of different target triples: 'dso_handle64_Release.bc' is 'x86_64-unknown-linux-gnu' whereas 'global_cu.bc' is 'x86_64-pc-linux-gnu'
+
+KLEE: WARNING: undefined reference to function: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv
+KLEE: WARNING: undefined reference to function: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv
+KLEE: WARNING: undefined reference to function: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8capacityEv
+KLEE: WARNING: undefined reference to function: _ZNSaIcEC1Ev
+KLEE: WARNING: undefined reference to function: _ZNSaIcED1Ev
+KLEE: WARNING: undefined reference to function: _ZNSaIcED2Ev
+KLEE: WARNING: undefined reference to function: _ZNSolsEPFRSoS_E
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_capacityEm
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcRKS3_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_set_lengthEm
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendERKS4_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6insertEmRKS4_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEPc
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_
+KLEE: WARNING: undefined reference to function: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+KLEE: WARNING: undefined reference to function: _ZNSt8ios_base4InitC1Ev
+KLEE: WARNING: undefined reference to function: _ZNSt8ios_base4InitD1Ev
+KLEE: WARNING: undefined reference to function: _ZSt19__throw_logic_errorPKc
+KLEE: WARNING: undefined reference to variable: _ZSt4cout
+KLEE: WARNING: undefined reference to function: _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+KLEE: WARNING: undefined reference to function: _ZSt9terminatev
+KLEE: WARNING: undefined reference to function: _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+KLEE: WARNING: undefined reference to function: _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE
+KLEE: WARNING: undefined reference to function: __cxa_atexit
+KLEE: WARNING: undefined reference to function: __cxa_begin_catch
+KLEE: WARNING: undefined reference to function: __cxa_end_catch
+KLEE: WARNING: undefined reference to function: __cxa_rethrow
+KLEE: WARNING: undefined reference to function: __gxx_personality_v0
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: vsnprintf
+KLEE: WARNING ONCE: calling external: _ZNSt8ios_base4InitC1Ev(94502909570760) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/iostream:74 25
+KLEE: WARNING ONCE: calling external: __cxa_atexit(94502909569968, 94502909570760, 94502909570808) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/iostream:74 25
+KLEE: WARNING ONCE: calling external: _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(94502907926720, 94502906237632) at ../../2019_Compound-Units-master/global_cu.cpp:880 18
+Acceleration:
+KLEE: WARNING ONCE: calling external: _ZNSaIcEC1Ev(94502909571488) at ../../2019_Compound-Units-master/global_cu.cpp:379 20
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_local_dataEv(94502909727968) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:530 38
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderC1EPcRKS3_(94502909727968, 94502909727984, 94502909571488) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:531 22
+KLEE: WARNING ONCE: calling external: strlen(94502909570776) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/char_traits.h:342 2
+KLEE: WARNING ONCE: calling external: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv(94502909727968) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.tcc:225 37
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_(94502909727984, 94502909570776, 94502909570777) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.tcc:225 52
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_M_set_lengthEm(94502909727968, 1) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.tcc:233 7
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc(94502909727968, 94502909570768) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:6126 14
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_(94502909728352, 94502909727968) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:6126 7
+KLEE: WARNING ONCE: calling external: vsnprintf(94502906239840, 16, 94502909570784, 94502909726208) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/ext/string_conversions.h:111 17
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_(94502910536016, 94502906239840, 94502906239841) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.tcc:225 52
+KLEE: WARNING ONCE: calling external: _ZNSaIcED1Ev(94502909571592) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/ext/string_conversions.h:115 7
+KLEE: WARNING ONCE: calling external: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4sizeEv(94502909728352) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:6103 42
+KLEE: WARNING ONCE: calling external: _ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8capacityEv(94502909728352) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:6104 35
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendERKS4_(94502909728352, 94502910536000) at /usr/bin/../lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h:6107 16
+KLEE: WARNING ONCE: calling external: _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(94502910731072) at ../../2019_Compound-Units-master/global_cu.cpp:379 13
+KLEE: WARNING ONCE: calling external: _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE(94502907926720, 94502910533824) at ../../2019_Compound-Units-master/global_cu.cpp:881 15
+KLEE: WARNING ONCE: calling external: _ZNSolsEPFRSoS_E(94502907926720, 94502909570056) at ../../2019_Compound-Units-master/global_cu.cpp:881 28
+KLEE: ERROR: ../../2019_Compound-Units-master/global_cu.cpp:881: failed external call: _ZNSolsEPFRSoS_E
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 1119
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 1
+#0 0x00007fd109153bc5 PrintStackTraceSignalHandler(void*) (/home/linuxbrew/.linuxbrew/opt/llvm@14/lib/libLLVM-14.so+0xf79bc5)
+#1 0x00007fd109150f8e SignalHandler(int) (/home/linuxbrew/.linuxbrew/opt/llvm@14/lib/libLLVM-14.so+0xf76f8e)
+#2 0x00007fd107befac0 __restore_rt (/home/linuxbrew/.linuxbrew/opt/glibc/lib/libc.so.6+0x3cac0)
+#3 0x000055f32c5aebb0 
+Segmentation fault (core dumped)
+

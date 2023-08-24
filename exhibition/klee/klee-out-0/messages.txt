@@ -1,0 +1,4 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: CryptoMiniSat
+KLEE: ERROR: ../../2019_Compound-Units-master/demo.cpp:18: failed external call: _ZNSolsEPFRSoS_E
+KLEE: NOTE: now ignoring this error at this location

@@ -1,0 +1,43 @@
+==17434== Callgrind, a call-graph generating cache profiler
+==17434== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==17434== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==17434== Command: ./test
+==17434== 
+==17434== For interactive control, run 'callgrind_control -h'.
+Acceleration:
+m^1s^-2
+
+Merged two compound_units:
+s^2s^3m^1s^-2
+
+Condensing the two merged ones:
+s^3m^1
+
+Multiplying two compound_units:
+m^5s^-3
+
+Dividing two compound_units:
+m^1s^-2
+
+Dividing again two compound_units:
+m^1s^0
+
+Removing degrees that are equal to zero:
+m^1
+
+Unfolding a nested compound_unit:
+m^2m^6s^-4m^-8
+
+Formating the unfolded compound_unit:
+s^-4
+
+==17434== 
+==17434== Events    : Ir Bc Bcm Bi Bim
+==17434== Collected : 2484233 340901 16080 6728 766
+==17434== 
+==17434== I   refs:      2,484,233
+==17434== 
+==17434== Branches:        347,629  (340,901 cond + 6,728 ind)
+==17434== Mispredicts:      16,846  ( 16,080 cond +   766 ind)
+==17434== Mispred rate:        4.8% (    4.7%     +  11.4%   )
+

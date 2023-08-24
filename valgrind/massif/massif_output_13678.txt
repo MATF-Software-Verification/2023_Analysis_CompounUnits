@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------
+Command:            ./a.out --massif-out-output1
+Massif arguments:   (none)
+ms_print arguments: massif.out.13678
+--------------------------------------------------------------------------------
+
+
+    KB
+72.02^                                                                      :#
+     |                                                                  :::::#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+     |                                                                  :   :#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   2.401
+
+Number of snapshots: 6
+ Detailed snapshots: [3 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,335,760           72,712           72,704             8            0
+  2      2,451,567           73,744           73,728            16            0
+  3      2,516,451           73,744           73,728            16            0
+99.98% (73,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.59% (72,704B) 0x4900A69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->98.59% (72,704B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->98.59% (72,704B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->98.59% (72,704B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->98.59% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         ->98.59% (72,704B) 0x1: ???
+|           ->98.59% (72,704B) 0x1FFF000062: ???
+|             ->98.59% (72,704B) 0x1FFF00006A: ???
+|               
+->01.39% (1,024B) 0x4AD8D03: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.39% (1,024B) 0x4AE8ECF: _IO_doallocbuf (genops.c:347)
+    ->01.39% (1,024B) 0x4AE7F2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+      ->01.39% (1,024B) 0x4AE66B4: _IO_new_file_xsputn (fileops.c:1244)
+        ->01.39% (1,024B) 0x4AE66B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+          ->01.39% (1,024B) 0x4ADA3C0: fwrite (iofwrite.c:39)
+            ->01.39% (1,024B) 0x498D853: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+              ->01.39% (1,024B) 0x498DC0B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+                ->01.39% (1,024B) 0x10A53E: main (demo.cpp:17)
+                  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      2,516,451            1,032            1,024             8            0
+  5      2,518,140                0                0             0            0
