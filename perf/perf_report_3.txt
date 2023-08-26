@@ -1,0 +1,53 @@
+Acceleration:
+m^1s^-2
+
+Merged two compound_units:
+s^2s^3m^1s^-2
+
+Condensing the two merged ones:
+s^3m^1
+
+Multiplying two compound_units:
+m^5s^-3
+
+Dividing two compound_units:
+m^1s^-2
+
+Dividing again two compound_units:
+m^1s^0
+
+Removing degrees that are equal to zero:
+m^1
+
+Unfolding a nested compound_unit:
+m^2m^6s^-4m^-8
+
+Formating the unfolded compound_unit:
+s^-4
+
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0,024 MB perf.data (14 samples) ]
+root@SYRN16-0366-L:/home/ptesic@syrmia.com/Desktop/VS/compound_unit/2023_Analysis_Compound_Unit/perf# sudo perf report -n --stdio
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 14  of event 'cycles'
+# Event count (approx.): 3112871
+#
+# Overhead       Samples  Command  Shared Object      Symbol                      
+# ........  ............  .......  .................  ............................
+#
+    26.60%             2  a.out    ld-2.31.so         [.] _dl_relocate_object
+    19.21%             1  a.out    libc-2.31.so       [.] __GI___libc_write
+    17.44%             1  a.out    [kernel.kallsyms]  [k] unlock_page
+    15.39%             1  a.out    ld-2.31.so         [.] _dl_lookup_symbol_x
+    12.87%             1  a.out    [kernel.kallsyms]  [k] vma_interval_tree_insert
+     7.31%             1  a.out    [kernel.kallsyms]  [k] vmacache_find
+     1.06%             1  perf-ex  [kernel.kallsyms]  [k] perf_lock_task_context
+     0.12%             1  perf-ex  [kernel.kallsyms]  [k] native_sched_clock
+     0.01%             5  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+
+
+
