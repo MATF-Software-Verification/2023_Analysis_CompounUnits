@@ -85,16 +85,12 @@ Naredni alat koji je korišćen za analizu projekta je Valgrind-ov podalat - mas
 Massif se koristi za vođenje evidencije o bajtovima o upotrebi, beleženje iskoriščenog prostora, samim tim i otkrivanje nekorišćenih objekata i promenljivih  i u druge svrhe. 
 Omogućava nam i merenje zauzeća stek memorije, ali to radi isključivo uz uključivanje opcije (--stacks=yes), jer ta opcija dosta usporava rad alata.
 
-<<<<<<< HEAD
-Massif Visualiser...
-=======
 ### Massif Visualiser - visualizer for Valgrind Massif memory-usage tracking tool
 **Massif Visualizer** je alat koji vizualizuje podatke izgenerisane od strane **massif** alata. Prvo pokrenemo projekat uz pomoć **Valgrind**-a korišćenjem opcije --tool=massif, a onda massif.out.PID fajlove prosledimo **massif-visualizer**-u.Gzip i Bzip2 kompresovani massif fajlovi takođe mogu biti otvoreni pomoću **massif-visualizer**-a.
 Rezultate koje smo dobili izgledaju ovako:
 ![image](./screenshots/massif_visualizer_1.png)
 ![image](./screenshots/massif_visualizer_2.png)
 ![image](./screenshots/massif_visualizer_3.png)
->>>>>>> development
 
 ## Valgrind - callgrind:
 **Callgrind** je alat koji u vidu grafa generiše listu poziva funkcija korisničkog programa.
@@ -113,8 +109,7 @@ perf [--version] [--help] [OPTIONS] COMMAND [ARGS]
 ```
 Neke komande mogu da budu nedostupne pošto zahtevaju specijalnu kernel podršku.
 
-<<<<<<< HEAD
-=======
+
 Za vizuelizaciju podataka dobijenih naredbom **perf report** koristićemo vatreni grafik (flame graph). Grafik prikazuje populaciju uzoraka na x osi, a dubinu steka na z osi. Svaka funkcija je jedan pravougaonik, širine proporcionalne broju uzoraka. Vatreni grafik/dijagram možemo dobiti korišćenjem **perf script** komande na sledeći način: 
 ```
 $ git clone https://github.com/brendangregg/FlameGraph
@@ -127,6 +122,6 @@ Primer vatrenog grafika koji testiranjem projekta comound unit izgenerisan je pr
 ![image](./screenshots/perf_flame_graph_1.png)
 ![image](./screenshots/perf_flame_graph_2.png)
 
->>>>>>> development
+
 ## Zaključci:
 U projektu nisu pronađeni veći propusti. Projekat je po obimu mali. Implementirano je dosta funkcionalnosti u .hpp fajlovima, ali je mali broj njih testiran u demo.cpp fajlu u kome se nalazi main funkcija.     
