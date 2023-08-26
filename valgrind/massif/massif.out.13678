@@ -1,0 +1,69 @@
+desc: (none)
+cmd: ./a.out --massif-out-output1
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2335760
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2451567
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2516451
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=peak
+n2: 73728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4900A69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000062: ???
+        n0: 72704 0x1FFF00006A: ???
+ n1: 1024 0x4AD8D03: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4AE8ECF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4AE7F2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4AE66B4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4AE66B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4ADA3C0: fwrite (iofwrite.c:39)
+       n1: 1024 0x498D853: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 1024 0x498DC0B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n0: 1024 0x10A53E: main (demo.cpp:17)
+#-----------
+snapshot=4
+#-----------
+time=2516451
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2518140
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
