@@ -9,5 +9,5 @@ test: ../../2019_Compound-Units/demo.cpp
 .PHONY: clean
 
 clean:
-	rm test massif_report.txt
+	rm test massif_report.txt whole_report massif_graph.txt
 	

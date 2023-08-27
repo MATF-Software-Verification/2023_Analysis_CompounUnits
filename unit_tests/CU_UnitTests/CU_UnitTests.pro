@@ -7,6 +7,7 @@ QMAKE_LFLAGS += --coverage
 CONFIG += qt console warn_on depend_includepath testcase
 CONFIG += c++17
 CONFIG -= app_bundle
+CONFIG += gcov
 
 TEMPLATE = app
 

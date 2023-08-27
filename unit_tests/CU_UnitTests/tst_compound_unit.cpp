@@ -24,7 +24,8 @@ private slots:
     void testCompoundUnitTemplate();
     void testIsValidTemplate();
     void testMergingCompoundUnits();
-    void testCondensingCompoundUnits();
+    void testCondensingCompoundUnits1();
+    void testCondensingCompoundUnits2();
     void testMultiplyingCompoundUnits();
     void testDividingCompoundUnits1();
     void testDividingCompoundUnits2();
@@ -60,7 +61,7 @@ void compound_unit::testMergingCompoundUnits(){
     QCOMPARE(return_value, expected_value);
 }
 
-void compound_unit::testCondensingCompoundUnits(){
+void compound_unit::testCondensingCompoundUnits1(){
     using acceleration = unit::compound_unit<unit::meter<1>, unit::second<-2>>;
     //using cout_format = unit::to_str_type_t<acceleration>;
 
@@ -74,6 +75,23 @@ void compound_unit::testCondensingCompoundUnits(){
     using condensed_cout_format = unit::to_str_type_t<condensed>;
     std::string return_value=condensed_cout_format::str();
     const char *expected_value="s^3m^1";
+    QCOMPARE(return_value, expected_value);
+}
+
+void compound_unit::testCondensingCompoundUnits2(){
+    using speed = unit::compound_unit<unit::meter<1>, unit::second<-1>>;
+    //using cout_format = unit::to_str_type_t<acceleration>;
+
+    using merged = unit::merge_t<speed,
+                                 unit::compound_unit<unit::second<-3>,
+                                                     unit::second<5>>>;
+    //using merged_cout_format = unit::to_str_type_t<merged>;
+
+
+    using condensed = unit::condense_t<merged>;
+    using condensed_cout_format = unit::to_str_type_t<condensed>;
+    std::string return_value=condensed_cout_format::str();
+    const char *expected_value="s^1m^1";
     QCOMPARE(return_value, expected_value);
 }
 
