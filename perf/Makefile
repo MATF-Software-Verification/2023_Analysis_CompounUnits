@@ -1,11 +1,13 @@
-Label4:
-	cd FlameGraph
-Label3:
-	sudo perf record -F 99 -ag -- sleep 60
-Label2:
-	perf script | ./stackcollapse-perf.pl > out.perf-folded
-Label1:
-	cat out.perf-folded | ./flamegraph.pl > perf-kernel.svg
+default: test
 
+show: Makefile
+	cat Makefile
 
+test: ../2019_Compound-Units/demo.cpp
+	g++ -std=c++17 -g -O0 ../2019_Compound-Units/demo.cpp -o test	
 
+.PHONY: clean
+
+clean:
+	rm test
+	
