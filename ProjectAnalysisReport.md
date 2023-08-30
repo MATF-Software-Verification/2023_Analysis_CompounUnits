@@ -80,10 +80,17 @@ s^-4
 ==15262== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
 
+Kao što možemo videti, **memcheck** nije pronašao nikakve memorijske greške. Imali smo dva alocirana bloka na hip memoriji i oba su dealocirana. Kako compound_unit.hpp fajl u implementaciji algoritama za rad sa mernim jedinicama ne sadrži, to jest, ne koristi nikakve alokacije, zaključujemo da su se sva alociranja dogodila u demo.cpp fajlu.
+
 ## Valgrind - massif:
 Naredni alat koji je korišćen za analizu projekta je Valgrind-ov podalat - massif, alat za analizu hip memorije iliti profajler hip memorije. 
 Massif se koristi za vođenje evidencije o bajtovima o upotrebi, beleženje iskoriščenog prostora, samim tim i otkrivanje nekorišćenih objekata i promenljivih  i u druge svrhe. 
 Omogućava nam i merenje zauzeća stek memorije, ali to radi isključivo uz uključivanje opcije (--stacks=yes), jer ta opcija dosta usporava rad alata.
+
+Po difoltu, rezultat rada **massif** alata biva smešten u folder massif.out.PID fajl. Ukoliko želimo da dobijemo bolji prikaz **massif**-ovog izveštaja dobijeni fajl ćemo proselditi programu **ms_print**. Jedan od rezultata koji smo dobili je sledeći:
+![image](./screenshots/massif_report.png)
+
+Razlog zbog kog smo ovakav grafik dobili leži u tome što projekat Compound Unit zapravo ne alocira prostor na hipu sve do kraja svog izvršavanja, budući da mu za kreiranje šablona ta memorija nije potrebna. Pri samom kraju izvršavanja dinamički se alocira mala količina hip memorije kako bi se napravile niske (u kojima su smeštena imena mernih jedinica) koje će potom biti ispisane na standardni izlaz. 
 
 ### Massif Visualiser - visualizer for Valgrind Massif memory-usage tracking tool
 **Massif Visualizer** je alat koji vizualizuje podatke izgenerisane od strane **massif** alata. Prvo pokrenemo projekat uz pomoć **Valgrind**-a korišćenjem opcije --tool=massif, a onda massif.out.PID fajlove prosledimo **massif-visualizer**-u.Gzip i Bzip2 kompresovani massif fajlovi takođe mogu biti otvoreni pomoću **massif-visualizer**-a.
@@ -124,4 +131,4 @@ Primer vatrenog grafika koji testiranjem projekta comound unit izgenerisan je pr
 
 
 ## Zaključci:
-U projektu nisu pronađeni veći propusti. Projekat je po obimu mali. Implementirano je dosta funkcionalnosti u .hpp fajlovima, ali je mali broj njih testiran u demo.cpp fajlu u kome se nalazi main funkcija.     
+U projektu nisu pronađeni veći propusti. Projekat je po obimu mali. Implementirano je dosta funkcionalnosti u .hpp fajlovima, ali je mali broj njih testiran u demo.cpp fajlu u kome se nalazi main funkcija. Trebalo bi napomenuti da je ideja Compound unit projekta bila da se u toku prevođenja projekta (eng. in compile time) konstruišu sve merne jedinice, a da se potom u toku izvršavanja eventualno ispišu neke njihove osobine. S toga nas ne iznađuju izveštaji alata **memcheck** i **massif** koji kažu da je hip memorija mali broj puta alocirana i to pri samom kraju izvršavanja programa.       
