@@ -1,10 +1,12 @@
+set -x
+t=$(date +%s)
 #Bellow are the commands you should use (one of them only)!
 
-valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_2 ./test1 
+valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_1_$t ./test1 
 
-#valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_2 -s ./test1
+#valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_1_$1 -s ./test1
 
-valgrind --tool=memcheck --track-origins=yes --leak-check=full --log-file=memcheck_report_2 ./test1
+#valgrind --tool=memcheck --track-origins=yes --leak-check=full --log-file=memcheck_report_1_$1 ./test1
 
 
 

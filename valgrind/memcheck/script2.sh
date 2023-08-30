@@ -1,8 +1,8 @@
 #Bellow are commands you should use (one of them only)!
 
-valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_1 ./test2 
+valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_2 ./test2 
 
-#valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_1 -s ./test2
+#valgrind --tool=memcheck --track-origins=yes --log-file=memcheck_report_2 -s ./test2
 
 
 
