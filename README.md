@@ -21,7 +21,9 @@ Ukoliko bismo pomnožili različite veličine, na primer: 32m/s^2 * 5s <br>
 - **Perf**
 
 ## Izvedeni zaključci:
-U projektu nisu pronađeni veći propusti. Projekat je po obimu mali. Implementirano je dosta funkcionalnosti u .hpp fajlovima, ali je mali broj njih testiran u demo.cpp fajlu.
+U projektu nisu pronađeni veći propusti. Projekat je po obimu mali. Implementirano je dosta funkcionalnosti u .hpp fajlovima, ali je mali broj njih testiran u demo.cpp fajlu u kome se nalazi main funkcija. Trebalo bi 
+napomenuti da je ideja Compound unit projekta bila da se u toku prevođenja projekta (eng. in compile time) konstruišu sve merne jedinice, a da se potom u toku izvršavanja eventualno ispišu neke njihove osobine. S toga 
+nas ne iznađuju izveštaji alata **memcheck** i **massif** koji kažu da je hip memorija mali broj puta alocirana i to pri samom kraju izvršavanja programa.
 
 ## Autor
 Petar Tešić 1064/2022 5I
