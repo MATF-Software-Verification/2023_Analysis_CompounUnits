@@ -10,6 +10,7 @@ Osnovna ideja iza samog projekta jeste pokušaj za definisanjem generičkog tipa
 Na primer: ```compound_unit<meter<1>, second<-2>>``` bi predstavljalo m/s^2 (mernu jedinicu za ubrzanje). <br>
 Ukoliko bismo pomnožili različite veličine, na primer: 32m/s^2 * 5s <br>
 ...trebalo bi da dobijemo m/s, odnosno ```<meter<1>, second<-1>>```. <br>
+
 **Napomena:**
 Za prevođenje projekta neophodno je koristiti verziju 17 programskog jezika C++. Jedna od komandi kojom bismo to mogli da uradimo je sledeća:
 ```
