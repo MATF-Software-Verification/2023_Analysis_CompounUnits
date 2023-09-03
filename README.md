@@ -11,6 +11,8 @@ Na primer: ```compound_unit<meter<1>, second<-2>>``` bi predstavljalo m/s^2 (mer
 Ukoliko bismo pomnožili različite veličine, na primer: 32m/s^2 * 5s <br>
 ...trebalo bi da dobijemo m/s, odnosno ```<meter<1>, second<-1>>```. <br>
 
+Za prevođenje projekta neophodno je koristiti verziju 17 programskog jezika C++.
+
 ## Korišćeni alati:
 
 - **gcov lcov**
